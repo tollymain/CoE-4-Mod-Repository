@@ -1,0 +1,122 @@
+# ----- Basic Mod Info -----
+
+icon			"./LessAggressiveWildlife.tga"
+description 	"This mod makes wild monsters stay within their preferred terrain. Additionally, humanoid (and certain other) monsters will stay in captured settlements until they are pushed out. (v.2.0, for Conquest of Elysium 4 version 4.26)"
+modprio 5
+
+
+
+
+
+## Wildlife units
+
+
+selectmonster "Moose"
+forest1
+
+selectmonster "Boar"
+forest1
+
+selectmonster "Wolf"
+forest1
+
+selectmonster "Rabbit"
+forest2
+
+selectmonster "Bear"
+north1
+
+selectmonster "Deer"
+forest1
+
+selectmonster "Elephant"
+south1
+desert2
+
+selectmonster "Lion"
+south1
+desert2
+
+selectmonster "Tiger"
+jungle1
+
+selectmonster "Snake"
+forest1
+
+selectmonster "Serpent"
+forest1
+
+selectmonster "Fire Ant"
+mountain2
+forest2
+
+selectmonster "Giant Ant"
+mountain1
+
+selectmonster "Scorpion"
+desert1
+
+
+
+
+## Independent units
+
+
+# Dwarves are commented out to allow Dvalas to expand
+
+# selectmonster "Dwarf"
+# money1
+#
+# selectmonster "Outdoor Dwarf"
+# money1
+
+selectmonster "Bandit"
+money1
+
+selectmonster "Spearman"
+money1
+
+selectmonster "Archer"
+money1
+
+selectmonster "Swordsman"
+money1
+
+selectmonster "Crossbowman"
+money1
+
+selectmonster "Brigand"
+money1
+
+selectmonster "Pygmy"
+money1
+
+selectmonster "Levy"
+money1
+
+selectmonster "Goblin"
+money1
+
+selectmonster "Hyena Tribe Warrior"
+money1
+
+selectmonster "Lion Tribe Warrior"
+money1
+
+selectmonster "Lion King"
+money1
+
+selectmonster "Witch Doctor"
+money1
+
+selectmonster "Captain"
+money1
+
+selectmonster "Bishop Fish"
+money1
+
+selectmonster "Kraken"
+money1
+
+selectmonster "Ichtyid Captain"
+money1

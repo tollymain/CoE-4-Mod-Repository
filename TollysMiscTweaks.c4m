@@ -1,0 +1,56 @@
+# ----- Basic Mod Info -----
+
+icon			"./TollysMiscTweaks.tga"
+description 	"This mod contains miscellaneous fixes and tweaks to vanilla content. (v.2.0, for Conquest of Elysium 4 version 4.26)"
+modprio 5
+
+
+
+
+## Unit tweaks. I honestly don't know why the prebat summon weapons are here but I don't really see a reason for them to be removed either, none of them are markedly useful in the larger scheme of things. Also I gave Centaurides because a) they have less health than Centaurs but less range? that doesn't make a whole lot of sense and b) fuck weird sexism, seriously.
+
+
+newmonster "Sidekick"
+copystats "Archer"
+
+selectmonster "Hero"
+prebatweapon 3	"Summon Sidekick"
+
+selectmonster	"Goblin Chieftain"
+prebatweapon 20	"Summon Goblin"
+
+selectmonster	"Goblin Hero"
+prebatweapon 8	"Summon Goblin"
+
+selectmonster	"Goblin Murderer"
+prebatweapon 3	"Summon Goblin"
+
+selectmonster	"Ogre Chief"
+prebatweapon 3	"Summon Ogre"
+
+selectmonster	"Chosen of Dvalin"
+prebatweapon 3	"Summon Outdoor Dwarfs"
+prebatweapon 7	"Summon Dwarf Warriors"
+
+selectmonster	"Centauride"
+clearweapons
+rangedweapon 1 28	#Longbow
+meleeweapon 4 95	#Hoof
+
+
+
+
+### Class reqterrains. Baron has the academy of higher magic because I think it's interesting, Pale One has the ancient temple because why don't they have something like this already why are they so baaaaaaad
+
+
+# Baron
+selectclass 1
+reqterr 88 # Require at least one academy of higher magic somewhere on the map
+
+# Necromancer
+selectclass 2
+reqterr 19 # Require at least one old battlefield somewhere on the map
+
+# Pale One
+selectclass 9
+reqterr 39 # Require at least one ancient temple somewhere on the map.

@@ -1,0 +1,125 @@
+# ----- Basic Mod Info -----
+
+icon			"./SpyMod.tga"
+description 	"This mod adds expensive recruitable stealthed scout/assassin commanders to every class. (v.2.0, for Conquest of Elysium 4 version 4.26)"
+modprio 5
+
+
+
+
+
+## Spy unit definition.
+
+
+# Spy
+newmonster "Spy"
+copystats "Assassin"
+hp 12
+mor 8
+lucky
+noleader
+aimaxshop 1
+rank -1
+rearpos
+
+
+
+
+## Spy recruitment.
+
+
+# Baron
+selectclass 1
+addcomrec "Spy" 5 130 30 3
+
+# Necromancer
+selectclass 2
+addcomrec "Spy" 3 130 30 3
+
+# Demonologist
+selectclass 3
+addcomrec "Spy" 3 130 30 3
+
+# Witch
+selectclass 4
+addcomrec "Spy" 3 130 30 3
+
+# Priestess
+selectclass 5
+addcomrec "Spy" 3 130 30 3
+
+# Bakemono
+selectclass 6
+addcomrec "Spy" 5 130 30 3
+
+# Barbarian
+selectclass 7
+addcomrec "Spy" 3 130 30 3
+
+# Senator
+selectclass 8
+addcomrec "Spy" 5 130 30 3
+
+# Pale One
+selectclass 9
+addcomrec "Spy" 2 130 30 3
+
+# Druid
+selectclass 10
+addcomrec "Spy" 3 130 30 3
+
+# Hoburg
+selectclass 11
+addcomrec "Spy" 5 130 30 3
+
+# Warlock
+selectclass 12
+addcomrec "Spy" 3 130 30 3
+
+# Priest King
+selectclass 13
+addcomrec "Spy" 3 130 30 3
+
+# Troll King
+selectclass 14
+addcomrec "Spy" 2 130 30 3
+
+# Enchanter
+selectclass 15
+addcomrec "Spy" 3 130 30 3
+
+# Beholder
+selectclass 16
+addcomrec "Spy" 2 130 30 3
+
+# Archmage
+selectclass 17
+addcomrec "Spy" 3 130 30 3
+
+# Goblin King
+selectclass 18
+addcomrec "Spy" 5 130 30 3
+
+# High Cultist
+selectclass 19
+addcomrec "Spy" 3 130 30 3
+
+# Dwarf Queen
+selectclass 20
+addcomrec "Spy" 3 130 30 3
+
+# Voice of El
+selectclass 21
+addcomrec "Spy" 7 130 30 3
+
+# Illusionist
+selectclass 22
+addcomrec "Spy" 7 130 30 3
+
+# Markgraf
+selectclass 23
+addcomrec "Spy" 7 130 30 3
+
+# Dryad Queen
+selectclass 24
+addcomrec "Spy" 7 130 30 3

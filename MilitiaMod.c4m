@@ -1,0 +1,104 @@
+# ----- Basic Mod Info -----
+
+icon			"./MilitiaMod.tga"
+description 	"This mod allows low level commanders to recruit weak token militia. Mostly useful for team games. (v.2.0, for Conquest of Elysium 4 version 4.26)"
+modprio 5
+
+
+
+
+
+## Militia unit definitions
+
+
+newmonster "Defensive Militia"
+copystats "Militia"
+mor 2
+stationary
+descr "The Defensive Militia is a ragtag group of defenders who volunteered to protect their settlements against whatever may come. Their ineptitude is however in stark contrast with such goals, and their primary purpose appears to be informing whatever force comes into the village that they are under your control, and hoping that they leave peacefully. This particular group at least appears to be armed."
+
+
+
+
+## Militia-raising rituals
+
+newritpow
+
+newritual "Raise Defensive Militia"
+level 1
+descr "The commander equips between one and three members of the settlement who are willing to defend it with their lives."
+nomonreq
+summoning
+free
+terr -58
+addstring "1d3*Defensive Militia"
+addstring "(-)Defensive Militia"
+closewin
+
+
+
+
+## Units given militia-raising capacities
+
+selectmonster "Captain"
+power 0 1
+
+selectmonster "High Lord"
+power 0 1
+
+selectmonster "Necromancer's Apprentice"
+power 0 1
+
+selectmonster "Cultist"
+power 0 1
+
+selectmonster "Witch's Apprentice"
+power 0 1
+
+selectmonster "Hierodule"
+power 0 1
+
+selectmonster "Bakemono General"
+power 0 1
+
+selectmonster "Mounted Chief"
+power 0 1
+
+selectmonster "Centurion"
+power 0 1
+
+selectmonster "Earth Reader"
+power 0 1
+
+selectmonster "Druid's Apprentice"
+power 0 1
+
+selectmonster "Hogmeister"
+power 0 1
+
+selectmonster "Warlock's Apprentice"
+power 0 1
+
+selectmonster "Tribal King"
+power 0 1
+
+selectmonster "Enchanter's Apprentice"
+power 0 1
+
+selectmonster "Cultist of the Deep"
+power 0 1
+
+selectmonster "Dwarf Commander"
+power 0 1
+
+selectmonster "Bishop"
+power 0 1
+
+selectmonster "Illusionist's Apprentice"
+power 0 1
+
+selectmonster "Nekromant"
+power 0 1
+
+selectmonster "Satyr Commander"
+power 0 1

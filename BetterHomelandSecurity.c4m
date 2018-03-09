@@ -1,0 +1,448 @@
+# ----- Basic Mod Info -----
+
+icon			"./BetterHomelandSecurity.tga"
+description 	"This mod adds class-appropriate stationary units to guard starting citadels from wildlife and ichthyids. (v.2.0, for Conquest of Elysium 4 version 4.26)"
+modprio 5
+
+
+
+
+
+## Guardian unit definitions
+
+
+newmonster "Guardian Ballista"
+copystats "Ballista"
+stationary
+fastheal
+immortal
+nametype 0
+charmres
+power 50 1
+descr "Citadel Guardians are an ardent group of defenders who protect the birthplace of your movement."
+
+newmonster "Guardian Tower Guard"
+copystats "Tower Guard"
+stationary
+fastheal
+immortal
+nametype 0
+charmres
+power 50 1
+descr "Citadel Guardians are an ardent group of defenders who protect the birthplace of your movement."
+
+newmonster "Guardian Bane Fire Archer"
+copystats "Bane Fire Archer"
+stationary
+fastheal
+immortal
+nametype 0
+charmres
+power 50 1
+descr "Citadel Guardians are an ardent group of defenders who protect the birthplace of your movement."
+
+newmonster "Guardian Devil"
+copystats "Devil"
+stationary
+fastheal
+immortal
+nametype 0
+charmres
+power 50 1
+descr "Citadel Guardians are an ardent group of defenders who protect the birthplace of your movement."
+
+newmonster "Guardian Imp Familiar"
+copystats "Imp Familiar"
+stationary
+fastheal
+immortal
+nametype 0
+charmres
+power 50 1
+descr "Citadel Guardians are an ardent group of defenders who protect the birthplace of your movement."
+
+newmonster "Guardian Androphag Archer"
+copystats "Androphag Archer"
+stationary
+fastheal
+immortal
+nametype 0
+charmres
+power 50 1
+descr "Citadel Guardians are an ardent group of defenders who protect the birthplace of your movement."
+
+newmonster "Guardian Ba'alite Archer"
+copystats "Ba'alite Archer"
+stationary
+fastheal
+immortal
+nametype 0
+charmres
+power 50 1
+descr "Citadel Guardians are an ardent group of defenders who protect the birthplace of your movement."
+
+newmonster "Guardian Shed"
+copystats "Shed"
+stationary
+fastheal
+immortal
+nametype 0
+charmres
+power 50 1
+descr "Citadel Guardians are an ardent group of defenders who protect the birthplace of your movement."
+
+newmonster "Guardian Dai Bakemono Archer"
+copystats "Dai Bakemono Archer"
+stationary
+fastheal
+immortal
+nametype 0
+charmres
+power 50 1
+descr "Citadel Guardians are an ardent group of defenders who protect the birthplace of your movement."
+
+newmonster "Guardian Pseudo Werebear"
+copystats "Barbarian Warrior"
+hp 30
+mr 5
+str 7
+mor 6
+clearspec
+regeneration
+stationary
+clearweapons
+meleeweapon 6 "bite"
+meleeweapon 4 "claw"
+meleeweapon 4 "claw"
+fastheal
+immortal
+nametype 0
+charmres
+power 50 1
+descr "Citadel Guardians are an ardent group of defenders who protect the birthplace of your movement."
+
+newmonster "Guardian Effigy"
+copystats "Effigy"
+fastheal
+immortal
+nametype 0
+charmres
+power 50 1
+descr "Citadel Guardians are defensive structures that protect the birthplace of your movement."
+
+newmonster "Guardian Triarius"
+copystats "Triarius"
+stationary
+fastheal
+immortal
+nametype 0
+charmres
+power 50 1
+descr "Citadel Guardians are an ardent group of defenders who protect the birthplace of your movement."
+
+newmonster "Guardian Oracle"
+copystats "Marble Oracle"
+fastheal
+immortal
+nametype 0
+charmres
+power 50 1
+descr "Guardian Oracles are defensive structures that protect the birthplace of your movement."
+
+newmonster "Guardian Boar Warrior"
+copystats "Boar Warrior"
+stationary
+fastheal
+immortal
+nametype 0
+charmres
+power 50 1
+descr "Citadel Guardians are an ardent group of defenders who protect the birthplace of your movement."
+
+newmonster "Guardian Hoburg Crossbow"
+copystats "Hoburg Crossbow"
+stationary
+fastheal
+immortal
+nametype 0
+charmres
+power 50 1
+descr "Citadel Guardians are an ardent group of defenders who protect the birthplace of your movement."
+
+newmonster "Guardian Lesser Fire"
+copystats "Lesser Fire"
+stationary
+fastheal
+immortal
+nametype 0
+charmres
+power 50 1
+descr "Citadel Guardians are an ardent group of defenders who protect the birthplace of your movement."
+
+newmonster "Guardian Cloud Elemental"
+copystats "Cloud Elemental"
+stationary
+fastheal
+immortal
+nametype 0
+charmres
+power 50 1
+descr "Citadel Guardians are an ardent group of defenders who protect the birthplace of your movement."
+
+newmonster "Guardian Lesser Earth"
+copystats "Lesser Earth"
+stationary
+fastheal
+immortal
+nametype 0
+charmres
+power 50 1
+descr "Citadel Guardians are an ardent group of defenders who protect the birthplace of your movement."
+
+newmonster "Guardian Lesser Water"
+copystats "Lesser Water"
+stationary
+fastheal
+immortal
+nametype 0
+charmres
+power 50 1
+descr "Citadel Guardians are an ardent group of defenders who protect the birthplace of your movement."
+
+newmonster "Guardian Tribal Warrior"
+copystats "Tribal Warrior"
+stationary
+fastheal
+immortal
+nametype 0
+charmres
+power 50 1
+descr "Citadel Guardians are an ardent group of defenders who protect the birthplace of your movement."
+
+newmonster "Guardian Rock Troll"
+copystats "Rock Troll"
+stationary
+fastheal
+immortal
+nametype 0
+charmres
+power 50 1
+descr "Citadel Guardians are an ardent group of defenders who protect the birthplace of your movement."
+
+newmonster "Guardian Masterpiece"
+copystats "Guardian"
+fastheal
+immortal
+nametype 0
+charmres
+power 50 1
+descr "Citadel Guardians are an ardent group of defenders that protect the birthplace of your movement."
+
+newmonster "Guardian Strange Thing"
+copystats "Strange Thing"
+fastheal
+immortal
+nametype 0
+charmres
+power 50 1
+descr "Citadel Guardians are an ardent group of defenders who protect the birthplace of your movement."
+
+newmonster "Guardian Star Oak"
+copystats "Star Oak"
+rank	 1
+fastheal
+immortal
+nametype 0
+charmres
+power 50 1
+descr "Citadel Guardians are an ardent group of defenders who protect the birthplace of your movement."
+
+newmonster "Guardian Flame Branded Ballista"
+copystats "Flame Branded Ballista"
+stationary
+fastheal
+immortal
+nametype 0
+charmres
+power 50 1
+descr "Citadel Guardians are an ardent group of defenders who protect the birthplace of your movement."
+
+newmonster "Guardian Rime Branded Ballista"
+copystats "Rime Branded Ballista"
+stationary
+fastheal
+immortal
+nametype 0
+charmres
+power 50 1
+descr "Citadel Guardians are an ardent group of defenders who protect the birthplace of your movement."
+
+newmonster "Guardian Angel"
+copystats "Angel"
+clearmove
+clearspec
+fireres
+shockres
+fastheal
+awe 2
+flying
+stationary
+clearweapons 
+prebatweapon 65536 "Personal Blessing"
+spellweapon 25 1
+spellweapon 5 1
+rangedweaponbonus 0 "Heavenly Horn"
+hp 14
+mr 9
+str 8
+mor 15
+immortal
+nametype 0
+charmres
+power 50 1
+descr "Citadel Guardians are an ardent group of defenders who protect the birthplace of your movement."
+
+newmonster "Guardian Phase Spider"
+copystats "Phase Spider"
+stationary
+fastheal
+immortal
+nametype 0
+charmres
+power 50 1
+descr "Citadel Guardians are an ardent group of defenders who protect the birthplace of your movement."
+
+newmonster "Guardian Illusion"
+copystats "Archer Illusion"
+stationary
+fastheal
+immortal
+nametype 0
+charmres
+power 50 1
+descr "Citadel Guardians are an ardent group of defenders who protect the birthplace of your movement."
+
+newmonster "Guardian Hobmark Crossbow"
+copystats "Hobmark Crossbow"
+stationary
+fastheal
+immortal
+nametype 0
+charmres
+power 50 1
+descr "Citadel Guardians are an ardent group of defenders who protect the birthplace of your movement."
+
+newmonster "Guardian Minotaur"
+copystats "Minotaur Warrior"
+stationary
+fastheal
+immortal
+nametype 0
+charmres
+power 50 1
+descr "Citadel Guardians are an ardent group of defenders who protect the birthplace of your movement."
+
+
+
+
+## Adding guardian units to starting units.
+
+
+# Baron
+selectclass 1
+addstartunits	"Guardian Ballista" 1
+addstartunits	"Guardian Tower Guard" 4
+
+# Necromancer
+selectclass 2
+addstartunits	"Guardian Bane Fire Archer" 6
+
+# Demonologist
+selectclass 3
+addstartunits	"Guardian Imp Familiar" 3
+addstartunits	"Guardian Devil" 1
+
+# Witch
+selectclass 4
+addstartunits	"Guardian Androphag Archer" 6
+
+# Priestess
+selectclass 5
+addstartunits	"Guardian Ba'alite Archer" 4
+addstartunits	"Guardian Shed" 1
+
+# Bakemono
+selectclass 6
+addstartunits	"Guardian Dai Bakemono Archer" 6
+
+# Barbarian
+selectclass 7
+addstartunits	"Guardian Pseudo Werebear" 14
+addstartunits	"Guardian Effigy" 1
+
+# Senator
+selectclass 8
+addstartunits	"Guardian Ballista" 1
+addstartunits	"Guardian Triarius" 6
+
+# Pale One
+selectclass 9
+addstartunits	"Guardian Oracle" 1
+
+# Druid
+selectclass 10
+addstartunits	"Guardian Boar Warrior" 14
+
+# Hoburg
+selectclass 11
+addstartunits	"Guardian Hoburg Crossbow" 12
+
+# Warlock
+selectclass 12
+addstartunits	"Guardian Cloud Elemental" 1
+addstartunits	"Guardian Lesser Earth" 1
+addstartunits	"Guardian Lesser Fire" 1
+addstartunits	"Guardian Lesser Water" 1
+
+# Priest King
+selectclass 13
+addstartunits	"Guardian Tribal Warrior" 16
+
+# Troll King
+selectclass 14
+addstartunits	"Guardian Rock Troll" 4
+
+# Enchanter
+selectclass 15
+addstartunits	"Guardian Masterpiece" 1
+
+# Goblin King
+selectclass 18
+addstartunits	"Guardian Rock Troll" 4
+
+# High Cultist
+selectclass 19
+addstartunits	"Guardian Strange Thing" 8
+addstartunits	"Guardian Star Oak"
+
+# Dwarf Queen
+selectclass 20
+addstartunits	"Guardian Flame Branded Ballista" 1
+addstartunits	"Guardian Rime Branded Ballista" 1
+
+# Voice of El
+selectclass 21
+addstartunits	"Guardian Angel" 2
+
+# Illusionist
+selectclass 22
+addstartunits	"Guardian Illusion" 12
+addstartunits	"Guardian Phase Spider" 1
+
+# Markgraf
+selectclass 23
+addstartunits	"Guardian Hobmark Crossbow" 12
+
+# Dryad Queen
+selectclass 24
+addstartunits	"Guardian Minotaur" 12

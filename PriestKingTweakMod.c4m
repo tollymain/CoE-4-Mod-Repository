@@ -1,0 +1,132 @@
+# ----- Basic Mod Info -----
+
+icon		"./PriestKingTweakMod.tga"
+description 	"This mod contains tweaks to the Priest-King's lesser rituals and miscellaneous units. (v1.0, for Conquest of Elysium 4 version 4.26)"
+modprio 5
+
+
+
+
+
+## Unit tweaks here. The tribal king gets forest stealth so as to make use of jungle warriors. Tlahuelpuchi becomes a true assassin. Civateteo gains another t1 spell per round, stealth, fear, and moves to mid-rank.
+
+
+selectmonster	"Tribal King"
+foreststealth
+
+selectweapon	659 # tlahuelpuchi life drain assassination weapon
+trgrank			8	# target rear
+
+selectmonster	"Civateteo"
+rank 0
+stealth
+fear			1
+spellweapon		38 1 # necromancy 1
+
+
+
+
+## All t1 summon rituals gain a small chance of a bless effect, 1/5 that of the t2 rituals. Some rituals are moderately rebalanced to make them competitive with Ceremony of the Lord of War.
+
+
+selectritual	"Ceremony of the Lord of War"
+level			9
+
+newritual		"Ceremony of the Lord of War"
+ritpow			33 # War Priest
+level			1
+cost			4   25 # 25 Sacrifices
+ornext2			5 # %. Success = next two effects are executed and then skip the rest, otherwise skip next 2 and execute the rest.
+soundfx			44 # Sound effect when the ritual is cast: harpa.smp (harp).
+gainbless		100 # % chance to receive a bless effect for sacred troops.
+summoning		# The ritual will summon the monsters specified in a random string.
+addstring		"Ozelotl"
+addstring		"1d3*Jaguar"
+descr "A Priest King performs a blood sacrifice to call the servants of the Lord of War.  Jaguars or Ozelotl will answer the call.  The servants are sent by their Lord and are always loyal to the summoner."
+
+
+selectritual	"Ceremony of the Bloody Mother"
+level			9
+
+newritual		"Ceremony of the Bloody Mother"
+ritpow			34 # Blood Priest
+level			1
+cost			4   25 # 25 Sacrifices
+ornext2			5 # %. Success = next two effects are executed and then skip the rest, otherwise skip next 2 and execute the rest.
+soundfx			44 # Sound effect when the ritual is cast: harpa.smp (harp).
+gainbless		100 # % chance to receive a bless effect for sacred troops.
+sum0chance		25 # % chance to summon first string instead of a random string among the others.
+summoning		# The ritual will summon the monsters specified in a random string.
+addstring		"Tlahuelpuchi"
+addstring		"1d2*Jaguar"
+addstring		"1d3+1*Serpent"
+descr "A Priest of the Bloody Mother performs a blood sacrifice to call the servants of the Bloody Mother.  Serpents, Jaguars or Tlahuelpuchi will answer the call.  The servants are sent by their Mother and are always loyal to the summoner."
+
+
+selectritual	"Ceremony of the Lord of Sky"
+level			9
+
+newritual		"Ceremony of the Lord of Sky"
+ritpow			35 # Sky Priest
+level			1
+cost			4   25 # 25 Sacrifices
+ornext2			5 # %. Success = next two effects are executed and then skip the rest, otherwise skip next 2 and execute the rest.
+soundfx			44 # Sound effect when the ritual is cast: harpa.smp (harp).
+gainbless		100 # % chance to receive a bless effect for sacred troops.
+sum0chance		20 # % chance to summon first string instead of a random string among the others.
+summoning		# The ritual will summon the monsters specified in a random string.
+addstring		"1d2Turkey Spirit Double"
+addstring		"1d4*Beast Bat"
+descr "A Sky Priest performs a blood sacrifice to call the servants of the Lord of Sky.  Beast Bats or Turkey Spirit Doubles will answer the call.  The servants are sent by their Lord and are always loyal to the summoner."
+
+
+selectritual	"Ceremony of the Lord of Rain"
+level			9
+
+newritual	"Ceremony of the Lord of Rain"
+ritpow			36 # Rain Priest
+level			1
+cost			4   25 # 25 Sacrifices
+ornext2			5 # %. Success = next two effects are executed and then skip the rest, otherwise skip next 2 and execute the rest.
+soundfx			44 # Sound effect when the ritual is cast: harpa.smp (harp).
+gainbless		100 # % chance to receive a bless effect for sacred troops.
+summoning		# The ritual will summon the monsters specified in a random string.
+addstring		"1d3*Rain Warrior"
+addstring		"1d5*Toad Warrior"
+addstring		"c*Toad Priest"
+descr "A Rain Priest performs a blood sacrifice to call the servants of the Lord of Rain.  Toad Warriors, Rain Warriors or Toad Priests will answer the call.  The servants are sent by their Lord and are always loyal to the summoner."
+
+
+selectritual	"Ceremony of the Lord of Night"
+level			9
+
+newritual		"Ceremony of the Lord of Night"
+ritpow			37 # Night Priest
+level			1
+cost			4   25 # 25 Sacrifices
+ornext2			5 # %. Success = next two effects are executed and then skip the rest, otherwise skip next 2 and execute the rest.
+soundfx			44 # Sound effect when the ritual is cast: harpa.smp (harp).
+gainbless		100 # % chance to receive a bless effect for sacred troops.
+summoning		# The ritual will summon the monsters specified in a random string.
+addstring		"Ozelotl"
+addstring		"1d3*Beast Bat"
+descr "A Moon Priest performs a blood sacrifice to call the servants of the Lord of Night.  Beast Bats or Ozelotl will answer the call.  The servants are sent by their Lord and are always loyal to the summoner."
+
+
+selectritual	"Ceremony of the Lord of Death"
+level			9
+
+newritual	"Ceremony of the Lord of Death"
+ritpow			38 # Death Priest
+level			1
+cost			4   25 # 25 Sacrifices
+ornext2			5 # %. Success = next two effects are executed and then skip the rest, otherwise skip next 2 and execute the rest.
+soundfx			44 # Sound effect when the ritual is cast: harpa.smp (harp).
+gainbless		100 # % chance to receive a bless effect for sacred troops.
+sum0chance		25 # % chance to summon first string instead of a random string among the others.
+summoning		# The ritual will summon the monsters specified in a random string.
+addstring		"Civateteo"
+addstring		"2d4*Longdead"
+descr "A Priest of the Dead performs a blood sacrifice to call the servants of the Lord of Death.  Longdead or Civateteo will answer the call.  The servants are sent by their Lord and are always loyal to the summoner."
+
+

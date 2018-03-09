@@ -1,0 +1,115 @@
+# ----- Basic Mod Info -----
+
+icon		"ViablePaleOnes.tga"
+description	"This mod lowers Pale Ones tier 2/stationary summon ritual costs and buffs their recruited units. (v.2.1, for Conquest of Elysium 4 version 4.26)"
+modprio 5
+
+
+
+
+
+## Designates starting citadel as a temple to enable Oracle spawns.
+
+
+selectterr 121
+temple
+
+
+
+## All Pale Ones recruits have fast healing because blindness isn’t fun, especially when combined with large expensive units (how do they live to be so old without turning into bags of afflictions anyway?). Statues have passwall to make them more worth using to defend valuable (read: walled) locations.
+
+
+selectmonster "Pale One"
+fastheal
+
+selectmonster "Pale One Soldier"
+fastheal
+
+selectmonster "Cavern Guard"
+fastheal
+
+selectmonster "Pale One Scout"
+fastheal
+
+selectmonster "Pale One Commander"
+fastheal
+
+selectmonster "Earth Reader"
+fastheal
+
+selectmonster "Earth Mind"
+fastheal
+
+selectmonster "Ancient Pale One"
+fastheal
+
+selectmonster "Seal Guard"
+fastheal
+
+selectmonster "Ancient Hurler"
+fastheal
+
+selectmonster "Ancient Commander"
+fastheal
+
+selectmonster "Oracle of Subterranean Waters"
+fastheal
+
+selectmonster "Oracle of the Dead”
+fastheal
+
+selectmonster "Oracle of Subterranean Fires"
+fastheal
+
+selectmonster "Oracle of Apsu"
+fastheal
+
+selectmonster "Oracle of Allatu"
+fastheal
+
+selectmonster "Oracle of Rhuax”
+fastheal
+
+selectmonster "King of the Deep"
+fastheal
+
+selectmonster "Sentinel"
+passwall
+
+selectmonster "Granite Guardian"
+passwall
+
+selectmonster "Marble Oracle"
+passwall
+
+selectmonster "Onyx Oracle"
+passwall
+
+#selectmonster "Cave Grub”
+#water
+
+
+
+#Tier 2 ritual costs are cut down across the board, as are rituals to summon stationary guardians.
+
+
+selectritual "Awaken Guardians"
+cost 10 15
+
+selectritual "Olm Conclave"
+cost 8 40
+
+selectritual "Summoning of the Dead"
+cost 9 30
+
+selectritual "Lava Summoning"
+cost 7 30
+
+selectritual "Deep Earth Summoning"
+cost 10 30
+
+selectritual "Awaken Marble Oracle"
+cost 10 30
+
+#selectritual "Awaken Onyx Oracle"
+#cost 10 60

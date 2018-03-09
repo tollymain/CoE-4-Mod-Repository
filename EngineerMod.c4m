@@ -1,0 +1,232 @@
+# ----- Basic Mod Info -----
+
+icon			"./EngineerMod.tga"
+description 	"This mod allows players to recruit engineers, who can build paths through forests and mountains. (v.2.0, for Conquest of Elysium 4 version 4.26)"
+modprio 5
+
+
+
+
+
+## Engineer rituals. Engineers can cut roads through forests and mountains to speed travel. Previous owner was looking to make a stagecoach thing to shuttle around commanders in but I think they hit a wall. Not sure how workable the concept is.
+
+
+newritpow
+
+newritual "Build Road Through Forest"
+level 1
+cost 0 20
+apcost 10
+rebatefx25 1
+rebatefx50 2
+descr "The Engineer can cut down Forests and Jungles to allow for faster transport."
+free
+terr -6
+alterloc 36
+closewin
+
+newritual "Build Road Through Mountains"
+level 2
+cost 0 30
+apcost 12
+rebatefx50 2
+descr "The Engineer can design roads through Mountains and Hills, turning them into plains"
+terr -5
+alterloc 0
+free
+closewin
+
+#newritual "Build Stagecoach Station"
+#cost 0 50
+#apcost 15
+#level 3
+#descr "The Capitalist can commission the erection of a building which allows commanders to regain some used AP, at cost of gold."
+#terr -29
+#free
+#closewin
+
+
+
+
+## Engineer units. They're all weedy nerds with no combat value. A journeyman can't even lead soldiers.
+
+
+newmonster "Journeyman Engineer"
+copystats "Alchemist"
+clearspec
+clearweapons
+hp			8
+armor		0
+mr			3
+mor			3
+str			3
+meleeweapon	0 1
+human
+allitemslots
+randomitem	25
+nametype	14
+growtime	25
+noleader
+aimaxshop	1
+aihold		1
+gold		1
+rearpos
+rank		-1
+power		0 1
+descr "Engineers are considered both a blessing and a blight to those who retain their services. As annoying as they may be, their meddlesome ways and complex contraptions inevitably lead to increased efficiency around them. Not to mention the whole building roads through hazardous terrain and such."
+
+newmonster "Master Engineer"
+copystats "Alchemist"
+clearspec
+clearweapons
+hp			12
+armor		0
+mr			4
+mor			4
+str			3
+meleeweapon	0 1
+human
+allitemslots
+randomitem	25
+nametype	14
+rebate		1
+growtime	50
+aimaxshop	1
+aihold		1
+gold		3
+rearpos
+rank		-1
+power		0 2
+descr "Engineers are considered both a blessing and a blight to those who retain their services. As annoying as they may be, their meddlesome ways and complex contraptions inevitably lead to increased efficiency around them. Not to mention the whole building roads through hazardous terrain and such."
+
+
+newmonster "Grandmaster Engineer"
+copystats "Master Alchemist"
+clearspec
+clearweapons
+hp			14
+armor		0
+mr			5
+mor			5
+str			3
+meleeweapon	0 1
+human
+allitemslots
+randomitem	25
+nametype	14
+rebate		2
+lucky
+clumsy
+sleepres
+charmres
+aimaxshop	1
+aihold		1
+gold		5
+trade		1
+rearpos
+rank		-1
+power		48 1
+power		0 3
+descr "Engineers are considered both a blessing and a blight to those who retain their services. As annoying as they may be, their meddlesome ways and complex contraptions inevitably lead to increased efficiency around them. Not to mention the whole building roads through hazardous terrain and such."
+
+
+
+
+## Engineer recruitment. Chances to recruit vary by class, mostly for fluff reasons.
+
+
+# Baron
+selectclass 1
+addcomrec "Journeyman Engineer" 10 80 40 0
+
+# Necromancer
+selectclass 2
+addcomrec "Journeyman Engineer" 7 80 40 0
+
+# Demonologist
+selectclass 3
+addcomrec "Journeyman Engineer" 7 80 40 0
+
+# Witch
+selectclass 4
+addcomrec "Journeyman Engineer" 2 80 40 0
+
+# Priestess
+selectclass 5
+addcomrec "Journeyman Engineer" 7 80 40 0
+
+# Bakemono
+selectclass 6
+addcomrec "Journeyman Engineer" 7 80 40 0
+
+# Barbarian
+selectclass 7
+addcomrec "Journeyman Engineer" 3 80 40 0
+
+# Senator
+selectclass 8
+addcomrec "Journeyman Engineer" 10 80 40 0
+
+# Pale One
+selectclass 9
+addcomrec "Journeyman Engineer" 7 80 40 0
+
+# Druid
+selectclass 10
+addcomrec "Journeyman Engineer" 3 80 40 0
+
+# Hoburg
+selectclass 11
+addcomrec "Journeyman Engineer" 10 80 40 0
+
+# Warlock
+selectclass 12
+addcomrec "Journeyman Engineer" 5 80 40 0
+
+# Priest King
+selectclass 13
+addcomrec "Journeyman Engineer" 7 80 40 0
+
+# Troll King
+selectclass 14
+addcomrec "Journeyman Engineer" 3 80 40 0
+
+# Enchanter
+selectclass 15
+addcomrec "Journeyman Engineer" 7 80 40 0
+
+# Beholder
+selectclass 16
+addcomrec "Journeyman Engineer" 5 80 40 0
+
+# Archmage
+selectclass 17
+addcomrec "Journeyman Engineer" 5 80 40 0
+
+# Goblin King
+selectclass 18
+addcomrec "Journeyman Engineer" 5 80 40 0
+
+# High Cultist
+selectclass 19
+addcomrec "Journeyman Engineer" 7 80 40 0
+
+# Dwarf Queen
+selectclass 20
+addcomrec "Journeyman Engineer" 5 80 40 0
+
+# Voice of El
+selectclass 21
+addcomrec "Journeyman Engineer" 10 80 40 0
+
+# Illusionist
+selectclass 22
+addcomrec "Journeyman Engineer" 7 80 40 0
+
+# Markgraf
+selectclass 23
+addcomrec "Journeyman Engineer" 7 80 40 0
+
+# Dryad Queen
+selectclass 24
+addcomrec "Journeyman Engineer" 2 80 40 0
