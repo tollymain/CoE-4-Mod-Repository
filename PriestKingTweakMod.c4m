@@ -93,6 +93,7 @@ descr "The High Priest performs the ultimate sacrifice to draw his Teotl God int
 selectmonster	"Sun Temple Attendant"
 clearspec
 human
+gathersacr
 holy			# Always blessed
 allitemslots
 nametype		23  # Mesoamerican male
@@ -102,6 +103,7 @@ mastery			1  # Any mastery will be to the unit at this offset
 selectmonster	"Priest King"
 clearspec
 human
+gathersacr
 holy			# Always blessed
 allitemslots
 nametype		23  # Mesoamerican male
@@ -112,6 +114,7 @@ mastery			1  # Any mastery will be to the unit at this offset
 selectmonster	"High Priest of the Sun"
 clearspec
 human
+gathersacr
 holy			# Always blessed
 allitemslots
 nametype		23  # Mesoamerican male
@@ -184,6 +187,7 @@ descr "The High Priest performs the ultimate sacrifice to draw his Teotl God int
 selectmonster	"Blood Temple Attendant"
 clearspec
 human
+gathersacr
 holy			# Always blessed
 allitemslots
 nametype		23  # Mesoamerican male
@@ -193,6 +197,7 @@ mastery			1  # Any mastery will be to the unit at this offset
 selectmonster	"Priest of the Bloody Mother"
 clearspec
 human
+gathersacr
 holy			# Always blessed
 allitemslots
 nametype		23  # Mesoamerican male
@@ -203,6 +208,7 @@ mastery			1  # Any mastery will be to the unit at this offset
 selectmonster	"High Priest of the Bloody Mother"
 clearspec
 human
+gathersacr
 holy			# Always blessed
 allitemslots
 nametype		23  # Mesoamerican male
@@ -280,6 +286,7 @@ descr "The High Priest performs the ultimate sacrifice to draw his Teotl God int
 selectmonster	"Sky Temple Attendant"
 clearspec
 human
+gathersacr
 holy			# Always blessed
 allitemslots
 nametype		23  # Mesoamerican male
@@ -289,6 +296,7 @@ mastery			1  # Any mastery will be to the unit at this offset
 selectmonster	"Sky Priest"
 clearspec
 human
+gathersacr
 holy			# Always blessed
 allitemslots
 nametype		23  # Mesoamerican male
@@ -299,6 +307,7 @@ mastery			1  # Any mastery will be to the unit at this offset
 selectmonster	"High Priest of the Sky"
 clearspec
 human
+gathersacr
 holy			# Always blessed
 allitemslots
 nametype		23  # Mesoamerican male
@@ -373,6 +382,7 @@ descr "The High Priest performs the ultimate sacrifice to draw his Teotl God int
 selectmonster	"Rain Temple Attendant"
 clearspec
 human
+gathersacr
 holy			# Always blessed
 allitemslots
 nametype		23  # Mesoamerican male
@@ -382,6 +392,7 @@ mastery			1  # Any mastery will be to the unit at this offset
 selectmonster	"Rain Priest"
 clearspec
 human
+gathersacr
 holy			# Always blessed
 allitemslots
 nametype		23  # Mesoamerican male
@@ -392,6 +403,7 @@ mastery			1  # Any mastery will be to the unit at this offset
 selectmonster	"High Priest of the Rain"
 clearspec
 human
+gathersacr
 holy			# Always blessed
 allitemslots
 nametype		23  # Mesoamerican male
@@ -462,6 +474,7 @@ descr "The High Priest performs the ultimate sacrifice to draw his Teotl God int
 selectmonster	"Moon Temple Attendant"
 clearspec
 human
+gathersacr
 holy			# Always blessed
 allitemslots
 nametype		23  # Mesoamerican male
@@ -471,6 +484,7 @@ mastery			1  # Any mastery will be to the unit at this offset
 selectmonster	"Moon Priest"
 clearspec
 human
+gathersacr
 holy			# Always blessed
 allitemslots
 nametype		23  # Mesoamerican male
@@ -481,6 +495,7 @@ mastery			1  # Any mastery will be to the unit at this offset
 selectmonster	"High Priest of the Night"
 clearspec
 human
+gathersacr
 holy			# Always blessed
 allitemslots
 nametype		23  # Mesoamerican male
@@ -552,6 +567,7 @@ descr "The High Priest performs the ultimate sacrifice to draw his Teotl God int
 selectmonster	"Death Temple Attendant"
 clearspec
 human
+gathersacr
 holy			# Always blessed
 allitemslots
 nametype		23  # Mesoamerican male
@@ -561,6 +577,7 @@ mastery			1  # Any mastery will be to the unit at this offset
 selectmonster	"Priest of the Dead"
 clearspec
 human
+gathersacr
 holy			# Always blessed
 allitemslots
 nametype		23  # Mesoamerican male
@@ -571,6 +588,7 @@ mastery			1  # Any mastery will be to the unit at this offset
 selectmonster	"High Priest of the Dead"
 clearspec
 human
+gathersacr
 holy			# Always blessed
 allitemslots
 nametype		23  # Mesoamerican male
