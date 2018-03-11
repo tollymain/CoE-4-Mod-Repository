@@ -1,7 +1,7 @@
 # ----- Basic Mod Info -----
 
 icon		"./PriestKingTweakMod.tga"
-description 	"This mod contains tweaks to the Priest-King's lesser rituals and miscellaneous units. (v1.0, for Conquest of Elysium 4 version 4.26)"
+description 	"This mod contains tweaks to the Priest-King's lesser rituals and miscellaneous units. (v1.1, for Conquest of Elysium 4 version 4.26)"
 modprio 5
 
 
@@ -26,14 +26,40 @@ spellweapon		38 1 # necromancy 1
 
 
 
-## All t1 summon rituals gain a small chance of a bless effect, 1/5 that of the t2 rituals. Some rituals are moderately rebalanced to make them competitive with Ceremony of the Lord of War.
+## All t1 summon rituals gain a small chance of a bless effect, 1/5 that of the t2 rituals. Some rituals are moderately rebalanced to make them competitive with Ceremony of the Lord of War. The entire ritual line for each sort of priest has been replaced due to bullshit.
 
 
-selectritual	"Ceremony of the Lord of War"
-level			9
+newritpow
+
+newritual		"Lesser Ritual of Mastery"
+level			1
+cost			4   20 # 20 Sacrifices
+newrit			1 # Caster will learn a new ritual of level 1.
+soundfx			57 # Sound effect when the ritual is cast: orchhit.smp (summoning).
+free
+descr "This ritual grants the caster a new first level ritual."
+
+newritual		"Ritual of Mastery"
+level			1
+cost			4  120 # 120 Sacrifices
+newrit			2 # Caster will learn a new ritual of level 2.
+levelup			2 # Level up to new monster (mastery on monster) if below level 2.
+soundfx			57 # Sound effect when the ritual is cast: orchhit.smp (summoning).
+rebatelvl		2 # Ritual can be cast for half price if caster's power level is greater than or equal to 2.
+free
+descr "This ritual grants the caster a new second level ritual.  If the caster is currently unable to cast second level rituals, it will be leveled up as well."
+
+newritual		"Ritual of Grand Mastery"
+level			2
+cost			4  480 # 480 Sacrifices
+newrit			3 # Caster will learn a new ritual of level 3.
+levelup			3 # Level up to new monster (mastery on monster) if below level 3.
+soundfx			57 # Sound effect when the ritual is cast: orchhit.smp (summoning).
+rebatelvl		3 # Ritual can be cast for half price if caster's power level is greater than or equal to 3.
+free
+descr "This ritual grants the caster a new third level ritual.  If the caster is currently unable to cast third level rituals, it will be leveled up as well."
 
 newritual		"Ceremony of the Lord of War"
-ritpow			33 # War Priest
 level			1
 cost			4   25 # 25 Sacrifices
 ornext2			5 # %. Success = next two effects are executed and then skip the rest, otherwise skip next 2 and execute the rest.
@@ -44,12 +70,86 @@ addstring		"Ozelotl"
 addstring		"1d3*Jaguar"
 descr "A Priest King performs a blood sacrifice to call the servants of the Lord of War.  Jaguars or Ozelotl will answer the call.  The servants are sent by their Lord and are always loyal to the summoner."
 
+newritual		"Greater Ceremony of the Lord of War"
+level			2
+cost			4  125 # 125 Sacrifices
+ornext2			25 # %. Success = next two effects are executed and then skip the rest, otherwise skip next 2 and execute the rest.
+soundfx			44 # Sound effect when the ritual is cast: harpa.smp (harp).
+gainbless		100 # % chance to receive a bless effect for sacred troops.
+summoning		# The ritual will summon the monsters specified in a random string.
+addstring		"Great Macaw"
+addstring		"1d3*Plumed Serpent"
+addstring		"Balam"
+descr "The Priest King performs a great sacrifice to his insatiable Lord.  The King is rewarded with powerful servants of the Teotl.  Plumed Serpents, Balam or Great Macaws will arrive to witness the ceremony and follow the King."
 
-selectritual	"Ceremony of the Bloody Mother"
-level			9
+newritual		"Summon God"
+level			3
+cost			4  500 # 500 Sacrifices
+summoning		# The ritual will summon the monsters specified in a random string.
+killtarg		9999 # Automatically kills target unit (caster).
+addstring		"c*Teotl of War"
+descr "The High Priest performs the ultimate sacrifice to draw his Teotl God into this world.  This will cost him and hundreds of slaves their life.  Different priests will summon different Gods.  The Teotl Gods are unique and six in number:  The Teotl of War, the Teotl of the Night, the Teotl of the Underworld, the Teotl of the Sky, the Teotl of Rain and Teteo Inan, the Bloody Mother. "
+
+selectmonster	"Sun Temple Attendant"
+clearspec
+human
+holy			# Always blessed
+allitemslots
+nametype		23  # Mesoamerican male
+power			0 1
+mastery			1  # Any mastery will be to the unit at this offset
+
+selectmonster	"Priest King"
+clearspec
+human
+holy			# Always blessed
+allitemslots
+nametype		23  # Mesoamerican male
+slavehunt		5
+power			0 2
+mastery			1  # Any mastery will be to the unit at this offset
+
+selectmonster	"High Priest of the Sun"
+clearspec
+human
+holy			# Always blessed
+allitemslots
+nametype		23  # Mesoamerican male
+slavehunt		5
+power			0 3
+
+
+newritpow
+
+newritual		"Lesser Ritual of Mastery"
+level			1
+cost			4   20 # 20 Sacrifices
+newrit			1 # Caster will learn a new ritual of level 1.
+soundfx			57 # Sound effect when the ritual is cast: orchhit.smp (summoning).
+free
+descr "This ritual grants the caster a new first level ritual."
+
+newritual		"Ritual of Mastery"
+level			1
+cost			4  120 # 120 Sacrifices
+newrit			2 # Caster will learn a new ritual of level 2.
+levelup			2 # Level up to new monster (mastery on monster) if below level 2.
+soundfx			57 # Sound effect when the ritual is cast: orchhit.smp (summoning).
+rebatelvl		2 # Ritual can be cast for half price if caster's power level is greater than or equal to 2.
+free
+descr "This ritual grants the caster a new second level ritual.  If the caster is currently unable to cast second level rituals, it will be leveled up as well."
+
+newritual		"Ritual of Grand Mastery"
+level			2
+cost			4  480 # 480 Sacrifices
+newrit			3 # Caster will learn a new ritual of level 3.
+levelup			3 # Level up to new monster (mastery on monster) if below level 3.
+soundfx			57 # Sound effect when the ritual is cast: orchhit.smp (summoning).
+rebatelvl		3 # Ritual can be cast for half price if caster's power level is greater than or equal to 3.
+free
+descr "This ritual grants the caster a new third level ritual.  If the caster is currently unable to cast third level rituals, it will be leveled up as well."
 
 newritual		"Ceremony of the Bloody Mother"
-ritpow			34 # Blood Priest
 level			1
 cost			4   25 # 25 Sacrifices
 ornext2			5 # %. Success = next two effects are executed and then skip the rest, otherwise skip next 2 and execute the rest.
@@ -62,12 +162,85 @@ addstring		"1d2*Jaguar"
 addstring		"1d3+1*Serpent"
 descr "A Priest of the Bloody Mother performs a blood sacrifice to call the servants of the Bloody Mother.  Serpents, Jaguars or Tlahuelpuchi will answer the call.  The servants are sent by their Mother and are always loyal to the summoner."
 
+newritual		"Greater Ceremony of the Bloody Mother"
+level			2
+cost			4  125 # 125 Sacrifices
+ornext2			25 # %. Success = next two effects are executed and then skip the rest, otherwise skip next 2 and execute the rest.
+soundfx			44 # Sound effect when the ritual is cast: harpa.smp (harp).
+gainbless		100 # % chance to receive a bless effect for sacred troops.
+summoning		# The ritual will summon the monsters specified in a random string.
+addstring		"1d3+1*Plumed Serpent"
+addstring		"c*Coatl"
+descr "A Priest of the Sky performs a great sacrifice to his insatiable Mother.  The Priest is rewarded with powerful servants of the Teteo Inan.  Plumed Serpents or Couatls will arrive to witness the ceremony and follow the priest."
 
-selectritual	"Ceremony of the Lord of Sky"
-level			9
+newritual		"Summon God"
+level			3
+cost			4  500 # 500 Sacrifices
+summoning		# The ritual will summon the monsters specified in a random string.
+killtarg		9999 # Automatically kills target unit (caster).
+addstring		"c*Teteo Inan"
+descr "The High Priest performs the ultimate sacrifice to draw his Teotl God into this world.  This will cost him and hundreds of slaves their life.  Different priests will summon different Gods.  The Teotl Gods are unique and six in number:  The Teotl of War, the Teotl of the Night, the Teotl of the Underworld, the Teotl of the Sky, the Teotl of Rain and Teteo Inan, the Bloody Mother. "
+
+selectmonster	"Blood Temple Attendant"
+clearspec
+human
+holy			# Always blessed
+allitemslots
+nametype		23  # Mesoamerican male
+power			0 1
+mastery			1  # Any mastery will be to the unit at this offset
+
+selectmonster	"Priest of the Bloody Mother"
+clearspec
+human
+holy			# Always blessed
+allitemslots
+nametype		23  # Mesoamerican male
+slavehunt		5
+power			0 2
+mastery			1  # Any mastery will be to the unit at this offset
+
+selectmonster	"High Priest of the Bloody Mother"
+clearspec
+human
+holy			# Always blessed
+allitemslots
+nametype		23  # Mesoamerican male
+slavehunt		5
+power			0 3
+
+
+newritpow
+
+newritual		"Lesser Ritual of Mastery"
+level			1
+cost			4   20 # 20 Sacrifices
+newrit			1 # Caster will learn a new ritual of level 1.
+soundfx			57 # Sound effect when the ritual is cast: orchhit.smp (summoning).
+free
+descr "This ritual grants the caster a new first level ritual."
+
+newritual		"Ritual of Mastery"
+level			1
+cost			4  120 # 120 Sacrifices
+newrit			2 # Caster will learn a new ritual of level 2.
+levelup			2 # Level up to new monster (mastery on monster) if below level 2.
+soundfx			57 # Sound effect when the ritual is cast: orchhit.smp (summoning).
+rebatelvl		2 # Ritual can be cast for half price if caster's power level is greater than or equal to 2.
+free
+descr "This ritual grants the caster a new second level ritual.  If the caster is currently unable to cast second level rituals, it will be leveled up as well."
+
+newritual		"Ritual of Grand Mastery"
+level			2
+cost			4  480 # 480 Sacrifices
+newrit			3 # Caster will learn a new ritual of level 3.
+levelup			3 # Level up to new monster (mastery on monster) if below level 3.
+soundfx			57 # Sound effect when the ritual is cast: orchhit.smp (summoning).
+rebatelvl		3 # Ritual can be cast for half price if caster's power level is greater than or equal to 3.
+free
+descr "This ritual grants the caster a new third level ritual.  If the caster is currently unable to cast third level rituals, it will be leveled up as well."
 
 newritual		"Ceremony of the Lord of Sky"
-ritpow			35 # Sky Priest
 level			1
 cost			4   25 # 25 Sacrifices
 ornext2			5 # %. Success = next two effects are executed and then skip the rest, otherwise skip next 2 and execute the rest.
@@ -79,12 +252,91 @@ addstring		"1d2Turkey Spirit Double"
 addstring		"1d4*Beast Bat"
 descr "A Sky Priest performs a blood sacrifice to call the servants of the Lord of Sky.  Beast Bats or Turkey Spirit Doubles will answer the call.  The servants are sent by their Lord and are always loyal to the summoner."
 
+newritual		"Greater Ceremony of the Lord of Sky"
+level			2
+cost			4  125 # 125 Sacrifices
+sum0chance		25 # % chance to summon first string instead of a random string among the others.
+ornext2			25 # %. Success = next two effects are executed and then skip the rest, otherwise skip next 2 and execute the rest.
+soundfx			44 # Sound effect when the ritual is cast: harpa.smp (harp).
+gainbless		100 # % chance to receive a bless effect for sacred troops.
+summoning		# The ritual will summon the monsters specified in a random string.
+addstring		"1d2*Tzitzimitl"
+addstring		"c*Coatl"
+addstring		"Great Macaw"
+addstring		"c*Chaac of the East"
+addstring		"c*Chaac of the South"
+addstring		"c*Chaac of the West"
+addstring		"c*Chaac of the North"
+descr "A Priest of the Sky performs a great sacrifice to his insatiable Lord.  The Priest is rewarded with powerful servants of the Teotl.  Tzitzimitl, Couatls, Great Macaws or Chaacs will arrive to witness the ceremony and follow the priest."
 
-selectritual	"Ceremony of the Lord of Rain"
-level			9
+newritual		"Summon God"
+level			3
+cost			4  500 # 500 Sacrifices
+summoning		# The ritual will summon the monsters specified in a random string.
+killtarg		9999 # Automatically kills target unit (caster).
+addstring		"c*Teotl of the Sky"
+descr "The High Priest performs the ultimate sacrifice to draw his Teotl God into this world.  This will cost him and hundreds of slaves their life.  Different priests will summon different Gods.  The Teotl Gods are unique and six in number:  The Teotl of War, the Teotl of the Night, the Teotl of the Underworld, the Teotl of the Sky, the Teotl of Rain and Teteo Inan, the Bloody Mother."
 
-newritual	"Ceremony of the Lord of Rain"
-ritpow			36 # Rain Priest
+selectmonster	"Sky Temple Attendant"
+clearspec
+human
+holy			# Always blessed
+allitemslots
+nametype		23  # Mesoamerican male
+power			0 1
+mastery			1  # Any mastery will be to the unit at this offset
+
+selectmonster	"Sky Priest"
+clearspec
+human
+holy			# Always blessed
+allitemslots
+nametype		23  # Mesoamerican male
+slavehunt		5
+power			0 2
+mastery			1  # Any mastery will be to the unit at this offset
+
+selectmonster	"High Priest of the Sky"
+clearspec
+human
+holy			# Always blessed
+allitemslots
+nametype		23  # Mesoamerican male
+slavehunt		5
+power			0 3
+
+
+newritpow
+
+newritual		"Lesser Ritual of Mastery"
+level			1
+cost			4   20 # 20 Sacrifices
+newrit			1 # Caster will learn a new ritual of level 1.
+soundfx			57 # Sound effect when the ritual is cast: orchhit.smp (summoning).
+free
+descr "This ritual grants the caster a new first level ritual."
+
+newritual		"Ritual of Mastery"
+level			1
+cost			4  120 # 120 Sacrifices
+newrit			2 # Caster will learn a new ritual of level 2.
+levelup			2 # Level up to new monster (mastery on monster) if below level 2.
+soundfx			57 # Sound effect when the ritual is cast: orchhit.smp (summoning).
+rebatelvl		2 # Ritual can be cast for half price if caster's power level is greater than or equal to 2.
+free
+descr "This ritual grants the caster a new second level ritual.  If the caster is currently unable to cast second level rituals, it will be leveled up as well."
+
+newritual		"Ritual of Grand Mastery"
+level			2
+cost			4  480 # 480 Sacrifices
+newrit			3 # Caster will learn a new ritual of level 3.
+levelup			3 # Level up to new monster (mastery on monster) if below level 3.
+soundfx			57 # Sound effect when the ritual is cast: orchhit.smp (summoning).
+rebatelvl		3 # Ritual can be cast for half price if caster's power level is greater than or equal to 3.
+free
+descr "This ritual grants the caster a new third level ritual.  If the caster is currently unable to cast third level rituals, it will be leveled up as well."
+
+newritual		"Ceremony of the Lord of Rain"
 level			1
 cost			4   25 # 25 Sacrifices
 ornext2			5 # %. Success = next two effects are executed and then skip the rest, otherwise skip next 2 and execute the rest.
@@ -96,12 +348,88 @@ addstring		"1d5*Toad Warrior"
 addstring		"c*Toad Priest"
 descr "A Rain Priest performs a blood sacrifice to call the servants of the Lord of Rain.  Toad Warriors, Rain Warriors or Toad Priests will answer the call.  The servants are sent by their Lord and are always loyal to the summoner."
 
+newritual		"Greater Ceremony of the Lord of Rain"
+level			2
+cost			4  125 # 125 Sacrifices
+ornext2			25 # %. Success = next two effects are executed and then skip the rest, otherwise skip next 2 and execute the rest.
+soundfx			44 # Sound effect when the ritual is cast: harpa.smp (harp).
+gainbless		100 # % chance to receive a bless effect for sacred troops.
+summoning		# The ritual will summon the monsters specified in a random string.
+addstring		"c*King of Rain & 2d4*Rain Warrior & 2d8*Toad Warrior"
+addstring		"c*Tlaloque of the East"
+addstring		"c*Tlaloque of the North"
+addstring		"c*Tlaloque of the West"
+addstring		"c*Tlaloque of the South"
+descr "A Priest of the Sky performs a great sacrifice to his insatiable Lord.  The Priest is rewarded with powerful servants of the Teotl.  Tlaloques or Rain Kings with their Toad Warrior retinues will arrive to witness the ceremony and follow the priest."
 
-selectritual	"Ceremony of the Lord of Night"
-level			9
+newritual		"Summon God"
+level			3
+cost			4  500 # 500 Sacrifices
+summoning		# The ritual will summon the monsters specified in a random string.
+killtarg		9999 # Automatically kills target unit (caster).
+addstring		"c*Teotl of Rain"
+descr "The High Priest performs the ultimate sacrifice to draw his Teotl God into this world.  This will cost him and hundreds of slaves their life.  Different priests will summon different Gods.  The Teotl Gods are unique and six in number:  The Teotl of War, the Teotl of the Night, the Teotl of the Underworld, the Teotl of the Sky, the Teotl of Rain and Teteo Inan, the Bloody Mother."
+
+selectmonster	"Rain Temple Attendant"
+clearspec
+human
+holy			# Always blessed
+allitemslots
+nametype		23  # Mesoamerican male
+power			0 1
+mastery			1  # Any mastery will be to the unit at this offset
+
+selectmonster	"Rain Priest"
+clearspec
+human
+holy			# Always blessed
+allitemslots
+nametype		23  # Mesoamerican male
+slavehunt		5
+power			0 2
+mastery			1  # Any mastery will be to the unit at this offset
+
+selectmonster	"High Priest of the Rain"
+clearspec
+human
+holy			# Always blessed
+allitemslots
+nametype		23  # Mesoamerican male
+slavehunt		5
+power			0 3
+
+
+newritpow
+
+newritual		"Lesser Ritual of Mastery"
+level			1
+cost			4   20 # 20 Sacrifices
+newrit			1 # Caster will learn a new ritual of level 1.
+soundfx			57 # Sound effect when the ritual is cast: orchhit.smp (summoning).
+free
+descr "This ritual grants the caster a new first level ritual."
+
+newritual		"Ritual of Mastery"
+level			1
+cost			4  120 # 120 Sacrifices
+newrit			2 # Caster will learn a new ritual of level 2.
+levelup			2 # Level up to new monster (mastery on monster) if below level 2.
+soundfx			57 # Sound effect when the ritual is cast: orchhit.smp (summoning).
+rebatelvl		2 # Ritual can be cast for half price if caster's power level is greater than or equal to 2.
+free
+descr "This ritual grants the caster a new second level ritual.  If the caster is currently unable to cast second level rituals, it will be leveled up as well."
+
+newritual		"Ritual of Grand Mastery"
+level			2
+cost			4  480 # 480 Sacrifices
+newrit			3 # Caster will learn a new ritual of level 3.
+levelup			3 # Level up to new monster (mastery on monster) if below level 3.
+soundfx			57 # Sound effect when the ritual is cast: orchhit.smp (summoning).
+rebatelvl		3 # Ritual can be cast for half price if caster's power level is greater than or equal to 3.
+free
+descr "This ritual grants the caster a new third level ritual.  If the caster is currently unable to cast third level rituals, it will be leveled up as well."
 
 newritual		"Ceremony of the Lord of Night"
-ritpow			37 # Night Priest
 level			1
 cost			4   25 # 25 Sacrifices
 ornext2			5 # %. Success = next two effects are executed and then skip the rest, otherwise skip next 2 and execute the rest.
@@ -112,12 +440,85 @@ addstring		"Ozelotl"
 addstring		"1d3*Beast Bat"
 descr "A Moon Priest performs a blood sacrifice to call the servants of the Lord of Night.  Beast Bats or Ozelotl will answer the call.  The servants are sent by their Lord and are always loyal to the summoner."
 
+newritual		"Greater Ceremony of the Lord of Night"
+level			2
+cost			4  125 # 125 Sacrifices
+ornext2			25 # %. Success = next two effects are executed and then skip the rest, otherwise skip next 2 and execute the rest.
+soundfx			44 # Sound effect when the ritual is cast: harpa.smp (harp).
+gainbless		100 # % chance to receive a bless effect for sacred troops.
+summoning		# The ritual will summon the monsters specified in a random string.
+addstring		"1d3*Tzitzimitl"
+addstring		"c*Onaqui"
+descr "A Moon Priest performs a great sacrifice to his insatiable Lord.  The Priest is rewarded with powerful servants of the Teotl.  Tzitzimitl or Onaquis will arrive to witness the ceremony and follow the priest."
 
-selectritual	"Ceremony of the Lord of Death"
-level			9
+newritual		"Summon God"
+level			3
+cost			4  500 # 500 Sacrifices
+summoning		# The ritual will summon the monsters specified in a random string.
+killtarg		9999 # Automatically kills target unit (caster).
+addstring		"c*Teotl of the Night"
+descr "The High Priest performs the ultimate sacrifice to draw his Teotl God into this world.  This will cost him and hundreds of slaves their life.  Different priests will summon different Gods.  The Teotl Gods are unique and six in number:  The Teotl of War, the Teotl of the Night, the Teotl of the Underworld, the Teotl of the Sky, the Teotl of Rain and Teteo Inan, the Bloody Mother."
 
-newritual	"Ceremony of the Lord of Death"
-ritpow			38 # Death Priest
+selectmonster	"Moon Temple Attendant"
+clearspec
+human
+holy			# Always blessed
+allitemslots
+nametype		23  # Mesoamerican male
+power			0 1
+mastery			1  # Any mastery will be to the unit at this offset
+
+selectmonster	"Moon Priest"
+clearspec
+human
+holy			# Always blessed
+allitemslots
+nametype		23  # Mesoamerican male
+slavehunt		5
+power			0 2
+mastery			1  # Any mastery will be to the unit at this offset
+
+selectmonster	"High Priest of the Night"
+clearspec
+human
+holy			# Always blessed
+allitemslots
+nametype		23  # Mesoamerican male
+slavehunt		5
+power			0 3
+
+
+newritpow
+
+newritual		"Lesser Ritual of Mastery"
+level			1
+cost			4   20 # 20 Sacrifices
+newrit			1 # Caster will learn a new ritual of level 1.
+soundfx			57 # Sound effect when the ritual is cast: orchhit.smp (summoning).
+free
+descr "This ritual grants the caster a new first level ritual."
+
+newritual		"Ritual of Mastery"
+level			1
+cost			4  120 # 120 Sacrifices
+newrit			2 # Caster will learn a new ritual of level 2.
+levelup			2 # Level up to new monster (mastery on monster) if below level 2.
+soundfx			57 # Sound effect when the ritual is cast: orchhit.smp (summoning).
+rebatelvl		2 # Ritual can be cast for half price if caster's power level is greater than or equal to 2.
+free
+descr "This ritual grants the caster a new second level ritual.  If the caster is currently unable to cast second level rituals, it will be leveled up as well."
+
+newritual		"Ritual of Grand Mastery"
+level			2
+cost			4  480 # 480 Sacrifices
+newrit			3 # Caster will learn a new ritual of level 3.
+levelup			3 # Level up to new monster (mastery on monster) if below level 3.
+soundfx			57 # Sound effect when the ritual is cast: orchhit.smp (summoning).
+rebatelvl		3 # Ritual can be cast for half price if caster's power level is greater than or equal to 3.
+free
+descr "This ritual grants the caster a new third level ritual.  If the caster is currently unable to cast third level rituals, it will be leveled up as well."
+
+newritual		"Ceremony of the Lord of Death"
 level			1
 cost			4   25 # 25 Sacrifices
 ornext2			5 # %. Success = next two effects are executed and then skip the rest, otherwise skip next 2 and execute the rest.
@@ -129,4 +530,49 @@ addstring		"Civateteo"
 addstring		"2d4*Longdead"
 descr "A Priest of the Dead performs a blood sacrifice to call the servants of the Lord of Death.  Longdead or Civateteo will answer the call.  The servants are sent by their Lord and are always loyal to the summoner."
 
+newritual		"Greater Ceremony of the Lord of Death"
+level			2
+cost			4  125 # 125 Sacrifices
+ornext2			25 # %. Success = next two effects are executed and then skip the rest, otherwise skip next 2 and execute the rest.
+soundfx			44 # Sound effect when the ritual is cast: harpa.smp (harp).
+gainbless		100 # % chance to receive a bless effect for sacred troops.
+summoning		# The ritual will summon the monsters specified in a random string.
+addstring		"c*Onaqui"
+addstring		"c*Bolon-Ti-Ku"
+descr "A Priest of the Dead performs a great sacrifice to his insatiable Lord.  The Priest is rewarded with powerful servants of the Teotl.  Onaquis or Bolon-Ti-Kus will arrive to witness the ceremony and follow the priest."
 
+newritual		"Summon God"
+level			3
+cost			4  500 # 500 Sacrifices
+summoning		# The ritual will summon the monsters specified in a random string.
+killtarg		9999 # Automatically kills target unit (caster).
+addstring		"c*Teotl of the Underworld"
+descr "The High Priest performs the ultimate sacrifice to draw his Teotl God into this world.  This will cost him and hundreds of slaves their life.  Different priests will summon different Gods.  The Teotl Gods are unique and six in number:  The Teotl of War, the Teotl of the Night, the Teotl of the Underworld, the Teotl of the Sky, the Teotl of Rain and Teteo Inan, the Bloody Mother."
+
+selectmonster	"Death Temple Attendant"
+clearspec
+human
+holy			# Always blessed
+allitemslots
+nametype		23  # Mesoamerican male
+power			0 1
+mastery			1  # Any mastery will be to the unit at this offset
+
+selectmonster	"Priest of the Dead"
+clearspec
+human
+holy			# Always blessed
+allitemslots
+nametype		23  # Mesoamerican male
+slavehunt		5
+power			0 2
+mastery			1  # Any mastery will be to the unit at this offset
+
+selectmonster	"High Priest of the Dead"
+clearspec
+human
+holy			# Always blessed
+allitemslots
+nametype		23  # Mesoamerican male
+slavehunt		5
+power			0 3
