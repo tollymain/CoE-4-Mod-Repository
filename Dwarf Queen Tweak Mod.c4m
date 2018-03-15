@@ -1,0 +1,142 @@
+# ----- Basic Mod Info -----
+
+icon		"./coe4.tga"
+description 	"This mod gives Dwarf Queen access to Agartha and modifies the dwarven unit progression.(v.1.0, for Conquest of Elysium 4 version 4.26)"
+modprio 5
+
+
+
+
+
+## Dwarf workers grow into Dwarves (who have 1 point less armor and damage). Dwarves can tunnel and may also be up/sidegraded into the other kinds of Dwarves, including a new commander detailed later. This requires a slightly convoluted path via which to make it work (gotta replace dvalas, dwarf workers, and dwarves w/ clones).
+
+
+selectmonster	"Young Dvala"
+name			"Old Young Dvala"
+
+newmonster		"Young Dvala"
+copystats		"Old Young Dvala"
+
+selectmonster	"Dvala"
+name			"Old Dvala"
+
+newmonster		"Dvala"
+copystats		"Old Dvala"
+
+selectmonster	"Daughter of Dvalin"
+name			"Old Daughter of Dvalin"
+
+newmonster		"Daughter of Dvalin"
+copystats		"Old Daughter of Dvalin"
+
+selectmonster	"Dwarf Worker"
+name			"Old Dwarf Worker"
+
+selectmonster	"Dwarf"
+name			"Old Dwarf"
+
+newmonster		"Dwarf Worker"
+copystats		"Old Dwarf Worker"
+growtime		10
+
+newmonster		"Dwarf"
+copystats		"Old Dwarf"
+armor			1
+clearweapons
+meleeweapon		-1 3 # Axe
+tunnel
+descr "Neither warrior nor worker, the common Dwarf is sort of Dwarf to be.  At this point they have evolved beyond being mere workers, but their fate is not yet decided by the stone and the queen.  Many of them aid in various tasks, but are strong enough to make formidable fighters and exceptional miners."
+
+
+
+
+
+## New rare recruit commander (Stonetapper) that can scry an area around them. Commander can be upgraded by Rune Smith to become amphibious. Ritual detailed later.
+
+
+newritpow
+
+newritual	"Cavern Sounding"
+level		1
+cost		1 15 # 15 Iron
+apcost		2
+planereq	1 # Agartha
+centerloc	# Center screen on target location.
+scryloc		30 # Scry radius 3 around target location.
+soundfx		70 # Sound effect when the ritual is cast: echo.wav.
+descr "The dwarves possess no seers. Rather, ever so often a rare dwarf is born with the potential to learn the secrets of sounding the caverns of the deep earth. The Stonetapper strikes at the earth rhythmically, and eventually gleans by it detailed knowledge of the underground world around them."
+
+newritual	"Deeps Sounding"
+level		2
+cost		1 30 # 30 Iron
+apcost 5
+terr		-43 # Required terrain: seas.
+centerloc
+scryloc		40 # Scry radius 4 around target location.
+soundfx		70 # Sound effect when the ritual is cast: echo.wav.
+descr "Underwater, the Stonetapper's art is much more difficult. Sound travels differently, farther, but more distorted. A gifted tapper can learn to use this, allowing them to 'see' even farther than they could hope to before. These dwarves are honored with armor that allows them to breathe beneath the sea itself and the title of Deepsdelver."
+
+
+newmonster	"Dwarf Stonetapper"
+copystats	"Dwarf"
+rank		-1
+power		0 1
+tunnel
+#farsight	1
+
+newmonster	"Dwarf Deepsdelver"
+copystats	"Dwarf Stonetapper"
+power		0 2
+water
+descr "Underwater, the Stonetapper's art is much more difficult. Sound travels differently, farther, but more distorted. A gifted tapper can learn to use this, allowing them to 'see' even farther than they could hope to before. These dwarves are honored with armor that allows them to breathe beneath the sea itself. These dwarves are honored with the title of Deepsdelver."
+
+
+## Dwarf Guards can be upgraded into Diver Guards by the Rune Smith. Upgrade ritual uses diamonds, which should make for an interesting choice here and there.
+
+
+newmonster	"Diver Guard"
+copystats	"Dwarf Guard"
+water
+tunnel
+descr "Although they are undoubtedly children of the earth, the dwarves must breathe air like the rest of us. Though they cannot equal their other elemental enchantments in this regard, their Rune Smiths can still create equipment enchanted with the essence of air. They only appear to use this for the purpose of sending dwarven expeditions venturing into places where they could not otherwise hope to breathe."
+
+newritual	"Create Diving Armor"
+ritpow		29 # Rune Smith
+level		1
+cost		9 20 # 20 Diamonds
+soundfx		57 # Sound effect when the ritual is cast: orchhit.smp (summoning).
+promotion	5 # Promote 5 units and set target unit to a promoted unit. Valid promotions are in paired strings not beginning with "(-)".
+free                     # This ritual is learned for free and everyone will know it from the start if able to.
+addstring	"Dwarf Stonetapper"
+addstring	"Dwarf Deepsdelver"
+addstring	"Dwarf Guard"
+addstring	"Diver Guard"
+descr "With the help of magic gems the Rune Smith forges five suits of magic armor for the best of the dwarven fighters.  A total of five Dwarf Guards and Dwarf Stonetappers must be present to make full use of this ability."
+
+
+## Recruitment for the new Stonetapper commander, dwarves are now the raw material of advanced dwarf units
+
+
+selectclass 20  # Dwarf Queen
+clearrec
+#									%	#		gold	die		iron
+addunitrec  "Dwarf Warrior"			100	5		0		0		30
+reclimiter  "=Dwarf"
+addunitrec  "Dwarf Guard"			100	5   	0  		0		40
+reclimiter  "=Dwarf"
+addunitrec  "Dwarf Arbalest"		100	5		0		0		30
+reclimiter  "=Dwarf"
+addunitrec  "Outdoor Dwarf"			100	2		10		0		10
+reclimiter  "=Dwarf"
+addmercrec  "Dwarven Ballista"		100	1		0		0		40
+reclimiter  "=Dwarf"
+addcomrec   "Dwarf Commander"		100			20		0		10
+reclimiter  "=Dwarf"
+addcomrec   "Dwarf Stonetapper"		10			50		0		50
+reclimiter  "=Dwarf"
+addmercrec  "Spearman"				4	10		150		0		0
+addmercrec  "Pikeneer"				4	10		150		0		10
+addmercrec  "Swordsman"				4	10		150		0		10
+addmercrec  "Archer"				4	10		150		0		0
+addmercrec  "Crossbowman"			4	10		150		0		0
+addmercrec  "Pikeneer"				2	20		250		0		10
