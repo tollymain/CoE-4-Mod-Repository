@@ -1,7 +1,7 @@
 # ----- Basic Mod Info -----
 
 icon		"./PriestKingTweakMod.tga"
-description 	"This mod contains tweaks to the Priest-King's lesser rituals and miscellaneous units. (v1.1, for Conquest of Elysium 4 version 4.26)"
+description 	"This mod contains tweaks to the Priest-King's lesser rituals and miscellaneous units. (v1.2, for Conquest of Elysium 4 version 4.26)"
 modprio 5
 
 
@@ -14,8 +14,14 @@ modprio 5
 selectmonster	"Tribal King"
 foreststealth
 
-selectweapon	659 # tlahuelpuchi life drain assassination weapon
-trgrank			8	# target rear
+selectweapon	659  # Life Drain (Tlahuelpuchi assassination attack)
+trgrank			8	# Rear enemy
+
+selectmonster	"Tlahuelpuchi
+clearweapons
+spellweapon		11 1  # Blood Magic at level 1
+meleeweapon		5 10  # Life Drain (value 5: D5 magic damage)
+assassinweapon	6 659  # Life Drain (value 6: D6 magic damage)
 
 selectmonster	"Civateteo"
 rank 0

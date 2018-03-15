@@ -1,7 +1,7 @@
 # ----- Basic Mod Info -----
 
 icon			"./BetterHomelandSecuritywithCommanders.tga"
-description 	"This mod adds class-appropriate stationary units to guard starting citadels from wildlife and ichthyids. It also adds stationary commanders, to keep AIs from suiciding. (v.2.0, for Conquest of Elysium 4 version 4.26)"
+description 	"This mod adds class-appropriate stationary units to guard starting citadels from wildlife and ichthyids. It also adds stationary commanders, to keep AIs from suiciding. (v.2.1, for Conquest of Elysium 4 version 4.26)"
 modprio 5
 
 
@@ -438,7 +438,7 @@ addstartcom		"Guardian Star Oak"
 # Dwarf Queen
 selectclass 20
 addstartunits	"Guardian Flame Branded Ballista" 1
-addstartcom		"Guardian Rime Branded Ballista"
+addstartunits	"Guardian Rime Branded Ballista" 1
 
 # Voice of El
 selectclass 21
