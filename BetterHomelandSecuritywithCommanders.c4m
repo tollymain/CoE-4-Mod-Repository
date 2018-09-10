@@ -1,11 +1,34 @@
 # ----- Basic Mod Info -----
 
 icon			"./BetterHomelandSecuritywithCommanders.tga"
-description 	"This mod adds class-appropriate stationary units to guard starting citadels from wildlife and ichthyids. It also adds stationary commanders, to keep AIs from suiciding. (v.2.1, for Conquest of Elysium 4 version 4.26)"
+description 	"This mod adds class-appropriate stationary units to guard starting citadels from wildlife and ichthyids. It also adds stationary commanders, to keep AIs from suiciding. (v.2.2, for Conquest of Elysium 4 version 4.26)"
 modprio 5
 
 
+## Suicide ritual for stationary commander. Summons horrors to end you. Only use I can see for this is getting a cheaty look at the map, so it's commented out. If player 0 is AI, they will suicide the first turn so if you use this, be player 0. Weird to have this up top but its gotta go before the dudes, I'm fairly sure.
 
+## Guardian rituals
+#newritpow 0
+#Resign - the only way to make this work for just the Player and not the AI is to use token units
+#newritual "Resign"
+#level 1
+#free
+#descr "This ritual will kill your guardian commander!! Use only if you know what you are doing. This ritual only works for Player 0 and is intended for singleplayer use only."
+#summoning
+#addstring "Guardian Soldier"
+#addstring "(-)Guardian Soldier"
+#apcost 3
+#nomonreq
+#closewin
+
+#playerevent
+#+hasunit 0 "Guardian Soldier"
+#+player 0
+#+armyowner 0
+#newunits 16 "Slave to Unreason"
+#newunits 16 "Hunter of Gods"
+#newunits 16 "Maker of Ruins"
+#endevent
 
 
 ## Guardian unit definitions
@@ -18,7 +41,8 @@ fastheal
 immortal
 nametype 0
 charmres
-power 50 1
+#power 0 1
+
 descr "Citadel Guardians are an ardent group of defenders who protect the birthplace of your movement."
 
 newmonster "Guardian Tower Guard"
@@ -28,7 +52,8 @@ fastheal
 immortal
 nametype 0
 charmres
-power 50 1
+#power 0 1
+
 descr "Citadel Guardians are an ardent group of defenders who protect the birthplace of your movement."
 
 newmonster "Guardian Bane Fire Archer"
@@ -38,7 +63,7 @@ fastheal
 immortal
 nametype 0
 charmres
-power 50 1
+#power 0 1
 descr "Citadel Guardians are an ardent group of defenders who protect the birthplace of your movement."
 
 newmonster "Guardian Devil"
@@ -48,7 +73,7 @@ fastheal
 immortal
 nametype 0
 charmres
-power 50 1
+#power 0 1
 descr "Citadel Guardians are an ardent group of defenders who protect the birthplace of your movement."
 
 newmonster "Guardian Imp Familiar"
@@ -58,7 +83,7 @@ fastheal
 immortal
 nametype 0
 charmres
-power 50 1
+#power 0 1
 descr "Citadel Guardians are an ardent group of defenders who protect the birthplace of your movement."
 
 newmonster "Guardian Androphag Archer"
@@ -68,7 +93,7 @@ fastheal
 immortal
 nametype 0
 charmres
-power 50 1
+#power 0 1
 descr "Citadel Guardians are an ardent group of defenders who protect the birthplace of your movement."
 
 newmonster "Guardian Ba'alite Archer"
@@ -78,7 +103,7 @@ fastheal
 immortal
 nametype 0
 charmres
-power 50 1
+#power 0 1
 descr "Citadel Guardians are an ardent group of defenders who protect the birthplace of your movement."
 
 newmonster "Guardian Shed"
@@ -88,7 +113,7 @@ fastheal
 immortal
 nametype 0
 charmres
-power 50 1
+#power 0 1
 descr "Citadel Guardians are an ardent group of defenders who protect the birthplace of your movement."
 
 newmonster "Guardian Dai Bakemono Archer"
@@ -98,7 +123,7 @@ fastheal
 immortal
 nametype 0
 charmres
-power 50 1
+#power 0 1
 descr "Citadel Guardians are an ardent group of defenders who protect the birthplace of your movement."
 
 newmonster "Guardian Pseudo Werebear"
@@ -118,7 +143,7 @@ fastheal
 immortal
 nametype 0
 charmres
-power 50 1
+#power 0 1
 descr "Citadel Guardians are an ardent group of defenders who protect the birthplace of your movement."
 
 newmonster "Guardian Effigy"
@@ -127,7 +152,7 @@ fastheal
 immortal
 nametype 0
 charmres
-power 50 1
+#power 0 1
 descr "Citadel Guardians are defensive structures that protect the birthplace of your movement."
 
 newmonster "Guardian Triarius"
@@ -137,7 +162,7 @@ fastheal
 immortal
 nametype 0
 charmres
-power 50 1
+#power 0 1
 descr "Citadel Guardians are an ardent group of defenders who protect the birthplace of your movement."
 
 newmonster "Guardian Oracle"
@@ -146,7 +171,7 @@ fastheal
 immortal
 nametype 0
 charmres
-power 50 1
+#power 0 1
 descr "Guardian Oracles are defensive structures that protect the birthplace of your movement."
 
 newmonster "Guardian Boar Warrior"
@@ -156,7 +181,7 @@ fastheal
 immortal
 nametype 0
 charmres
-power 50 1
+#power 0 1
 descr "Citadel Guardians are an ardent group of defenders who protect the birthplace of your movement."
 
 newmonster "Guardian Hoburg Crossbow"
@@ -166,7 +191,7 @@ fastheal
 immortal
 nametype 0
 charmres
-power 50 1
+#power 0 1
 descr "Citadel Guardians are an ardent group of defenders who protect the birthplace of your movement."
 
 newmonster "Guardian Lesser Fire"
@@ -176,7 +201,7 @@ fastheal
 immortal
 nametype 0
 charmres
-power 50 1
+#power 0 1
 descr "Citadel Guardians are an ardent group of defenders who protect the birthplace of your movement."
 
 newmonster "Guardian Cloud Elemental"
@@ -186,7 +211,7 @@ fastheal
 immortal
 nametype 0
 charmres
-power 50 1
+#power 0 1
 descr "Citadel Guardians are an ardent group of defenders who protect the birthplace of your movement."
 
 newmonster "Guardian Lesser Earth"
@@ -196,7 +221,7 @@ fastheal
 immortal
 nametype 0
 charmres
-power 50 1
+#power 0 1
 descr "Citadel Guardians are an ardent group of defenders who protect the birthplace of your movement."
 
 newmonster "Guardian Lesser Water"
@@ -206,7 +231,7 @@ fastheal
 immortal
 nametype 0
 charmres
-power 50 1
+#power 0 1
 descr "Citadel Guardians are an ardent group of defenders who protect the birthplace of your movement."
 
 newmonster "Guardian Tribal Warrior"
@@ -216,7 +241,7 @@ fastheal
 immortal
 nametype 0
 charmres
-power 50 1
+#power 0 1
 descr "Citadel Guardians are an ardent group of defenders who protect the birthplace of your movement."
 
 newmonster "Guardian Rock Troll"
@@ -226,7 +251,7 @@ fastheal
 immortal
 nametype 0
 charmres
-power 50 1
+#power 0 1
 descr "Citadel Guardians are an ardent group of defenders who protect the birthplace of your movement."
 
 newmonster "Guardian Masterpiece"
@@ -235,7 +260,7 @@ fastheal
 immortal
 nametype 0
 charmres
-power 50 1
+#power 0 1
 descr "Citadel Guardians are an ardent group of defenders that protect the birthplace of your movement."
 
 newmonster "Guardian Strange Thing"
@@ -244,7 +269,7 @@ fastheal
 immortal
 nametype 0
 charmres
-power 50 1
+#power 0 1
 descr "Citadel Guardians are an ardent group of defenders who protect the birthplace of your movement."
 
 newmonster "Guardian Star Oak"
@@ -254,7 +279,7 @@ fastheal
 immortal
 nametype 0
 charmres
-power 50 1
+#power 0 1
 descr "Citadel Guardians are an ardent group of defenders who protect the birthplace of your movement."
 
 newmonster "Guardian Flame Branded Ballista"
@@ -264,7 +289,7 @@ fastheal
 immortal
 nametype 0
 charmres
-power 50 1
+#power 0 1
 descr "Citadel Guardians are an ardent group of defenders who protect the birthplace of your movement."
 
 newmonster "Guardian Rime Branded Ballista"
@@ -274,7 +299,7 @@ fastheal
 immortal
 nametype 0
 charmres
-power 50 1
+#power 0 1
 descr "Citadel Guardians are an ardent group of defenders who protect the birthplace of your movement."
 
 newmonster "Guardian Angel"
@@ -299,7 +324,7 @@ mor 15
 immortal
 nametype 0
 charmres
-power 50 1
+#power 0 1
 descr "Citadel Guardians are an ardent group of defenders who protect the birthplace of your movement."
 
 newmonster "Guardian Phase Spider"
@@ -309,7 +334,7 @@ fastheal
 immortal
 nametype 0
 charmres
-power 50 1
+#power 0 1
 descr "Citadel Guardians are an ardent group of defenders who protect the birthplace of your movement."
 
 newmonster "Guardian Illusion"
@@ -319,7 +344,8 @@ fastheal
 immortal
 nametype 0
 charmres
-power 50 1
+power 50 1#power 0 1
+
 descr "Citadel Guardians are an ardent group of defenders who protect the birthplace of your movement."
 
 newmonster "Guardian Hobmark Crossbow"
@@ -329,7 +355,8 @@ fastheal
 immortal
 nametype 0
 charmres
-power 50 1
+#power 0 1
+
 descr "Citadel Guardians are an ardent group of defenders who protect the birthplace of your movement."
 
 newmonster "Guardian Minotaur"
@@ -339,7 +366,8 @@ fastheal
 immortal
 nametype 0
 charmres
-power 50 1
+#power 0 1
+
 descr "Citadel Guardians are an ardent group of defenders who protect the birthplace of your movement."
 
 
@@ -461,30 +489,3 @@ addstartcom		"Guardian Hobmark Crossbow"
 selectclass 24
 addstartunits	"Guardian Minotaur" 1
 addstartcom		"Guardian Minotaur"
-
-
-
-## Suicide ritual for stationary commander. Summons horrors to end you. Only use I can see for this is getting a cheaty look at the map, so it's commented out. If player 0 is AI, they will suicide the first turn so if you use this, be player 0
-
-## Guardian rituals
-#newritpow 0
-#Resign - the only way to make this work for just the Player and not the AI is to use token units
-#newritual "Resign"
-#level 1
-#free
-#descr "This ritual will kill your guardian commander!! Use only if you know what you are doing. This ritual only works for Player 0 and is intended for singleplayer use only."
-summoning
-#addstring "Guardian Soldier"
-#addstring "(-)Guardian Soldier"
-#apcost 3
-#nomonreq
-#closewin
-
-#playerevent
-#+hasunit 0 "Guardian Soldier"
-#+player 0
-#+armyowner 0
-#newunits 16 "Slave to Unreason"
-#newunits 16 "Hunter of Gods"
-#newunits 16 "Maker of Ruins"
-#endevent
